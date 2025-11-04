@@ -70,67 +70,57 @@ export default function HeaderHero() {
         )}
       </div>
 
-      {/* Hero */}
+      {/* Hero - video centered and enlarged, text below */}
       <section id="home" className="relative mx-auto max-w-7xl px-4 pt-10 pb-16 md:pt-16 md:pb-24">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <div className="order-2 md:order-1">
+        <div className="mx-auto flex max-w-5xl flex-col items-center">
+          {/* Main video focal point */}
+          <div className="w-full">
+            <div className="mx-auto aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-black/10 shadow-sm">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/Nw478YoO3og?si=Tlq4mQe0x2RlSpPJ&autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=Nw478YoO3og"
+                title="Velodent Overview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          {/* Text elements below video */}
+          <div className="mt-8 max-w-3xl text-center">
             <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
               AI Automation for Modern Dental Clinics
             </h1>
             <p className="mt-3 text-base text-black/70 md:text-lg">
               Velodent streamlines front-desk ops, patient onboarding, and recall systems using safe, compliant AI.
             </p>
-
-            {/* Video and booking copy */}
-            <div className="mt-6 space-y-4">
-              <div className="aspect-video w-full max-w-2xl mx-auto overflow-hidden rounded-xl border border-black/10 flex items-center justify-center">
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/Nw478YoO3og?si=Tlq4mQe0x2RlSpPJ&autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=Nw478YoO3og"
-                  title="Velodent Overview"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <p className="text-sm text-black/70">
-                  Book a 20-Minute Discovery Call — Choose a Time That Works for You
-                </p>
-                <BookingButton className="mt-3" />
-              </div>
-            </div>
-
-            {/* Short blurb */}
-            <div className="mt-10 rounded-xl border border-black/10 p-6">
-              <h3 className="text-lg font-medium">Built for high-performing dental teams</h3>
-              <p className="mt-2 text-black/70">
-                We automate front desk workflows end-to-end — from first contact to post-visit follow-ups. Our AI receptionist answers, schedules, verifies insurance, and keeps your calendar fully optimized. Privacy-first by design.
+            <div className="mt-5 flex flex-col items-center">
+              <p className="text-sm text-black/70">
+                Book a 20-Minute Discovery Call — Choose a Time That Works for You
               </p>
-              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
-                <div className="rounded-lg border border-black/10 p-4">
-                  <div className="text-2xl font-semibold">2×</div>
-                  <div className="text-xs text-black/60">Efficiency ROI</div>
-                </div>
-                <div className="rounded-lg border border-black/10 p-4">
-                  <div className="text-2xl font-semibold">24/7</div>
-                  <div className="text-xs text-black/60">Coverage</div>
-                </div>
-                <div className="rounded-lg border border-black/10 p-4">
-                  <div className="text-2xl font-semibold">99.9%</div>
-                  <div className="text-xs text-black/60">Uptime</div>
-                </div>
-              </div>
+              <BookingButton className="mt-3" />
             </div>
           </div>
 
-          {/* Spline animation */}
-          <div className="order-1 h-[440px] w-full md:order-2 md:h-[620px]">
-            <div className="relative h-full w-full overflow-hidden rounded-2xl border border-black/10">
-              <Spline
-                scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode"
-                style={{ width: '100%', height: '100%' }}
-              />
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.3)_70%,rgba(255,255,255,0.7)_100%)]" />
+          {/* Supporting metrics remain below, centered */}
+          <div className="mt-10 w-full max-w-4xl rounded-xl border border-black/10 p-6">
+            <h3 className="text-center text-lg font-medium">Built for high-performing dental teams</h3>
+            <p className="mt-2 text-center text-black/70">
+              We automate front desk workflows end-to-end — from first contact to post-visit follow-ups. Our AI receptionist answers, schedules, verifies insurance, and keeps your calendar fully optimized. Privacy-first by design.
+            </p>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center max-sm:grid-cols-1 sm:max-w-md sm:mx-auto md:max-w-none">
+              <div className="rounded-lg border border-black/10 p-4">
+                <div className="text-2xl font-semibold">2×</div>
+                <div className="text-xs text-black/60">Efficiency ROI</div>
+              </div>
+              <div className="rounded-lg border border-black/10 p-4">
+                <div className="text-2xl font-semibold">24/7</div>
+                <div className="text-xs text-black/60">Coverage</div>
+              </div>
+              <div className="rounded-lg border border-black/10 p-4">
+                <div className="text-2xl font-semibold">99.9%</div>
+                <div className="text-xs text-black/60">Uptime</div>
+              </div>
             </div>
           </div>
         </div>
