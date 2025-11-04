@@ -20,24 +20,24 @@ export default function HeaderHero() {
   return (
     <header className="relative">
       {/* Nav */}
-      <div className="sticky top-0 z-50 w-full border-b border-black/10 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 md:py-7">
+      <div className="sticky top-0 z-50 w-full border-b border-black/10 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:py-4">
           {/* Brand */}
           <div className="flex items-center">
             <a href="#home" className="block select-none leading-none" aria-label="Velodent Home">
-              <span className="text-2xl font-semibold tracking-tight md:text-3xl">Velodent</span>
+              <span className="text-2xl font-semibold tracking-tight md:text-[28px]">Velodent</span>
             </a>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden items-center gap-8 md:flex">
-            <a href="#home" className="text-[15px] font-medium hover:opacity-70">Home</a>
-            <a href="#about" className="text-[15px] font-medium hover:opacity-70">About</a>
-            <a href="#services" className="text-[15px] font-medium hover:opacity-70">Services</a>
-            <a href="#cases" className="text-[15px] font-medium hover:opacity-70">Case Studies</a>
-            <a href="#testimonials" className="text-[15px] font-medium hover:opacity-70">Testimonials</a>
-            <a href="#faq" className="text-[15px] font-medium hover:opacity-70">FAQ</a>
-            <a href="#dashboard" className="text-[15px] font-medium hover:opacity-70">Dashboard</a>
+          <nav className="hidden items-center gap-6 md:flex">
+            <a href="#home" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">Home</a>
+            <a href="#about" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">About</a>
+            <a href="#services" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">Services</a>
+            <a href="#cases" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">Case Studies</a>
+            <a href="#testimonials" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">Testimonials</a>
+            <a href="#faq" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">FAQ</a>
+            <a href="#dashboard" className="text-[15px] font-medium transition hover:opacity-80 hover:underline underline-offset-4">Dashboard</a>
           </nav>
 
           {/* CTA (Desktop) */}
@@ -55,8 +55,8 @@ export default function HeaderHero() {
           </button>
         </div>
         {navOpen && (
-          <div className="mx-auto block max-w-7xl px-4 pb-5 md:hidden">
-            <div className="flex flex-col gap-2">
+          <div className="mx-auto block max-w-7xl px-4 pb-3 md:hidden">
+            <div className="flex flex-col gap-1.5">
               <a href="#home" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Home</a>
               <a href="#about" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>About</a>
               <a href="#services" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Services</a>
@@ -77,13 +77,13 @@ export default function HeaderHero() {
             <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
               AI Automation for Modern Dental Clinics
             </h1>
-            <p className="mt-4 text-base text-black/70 md:text-lg">
+            <p className="mt-3 text-base text-black/70 md:text-lg">
               Velodent streamlines front-desk ops, patient onboarding, and recall systems using safe, compliant AI.
             </p>
 
             {/* Video and booking copy */}
-            <div className="mt-8 space-y-4">
-              <div className="aspect-video w-full overflow-hidden rounded-xl border border-black/10">
+            <div className="mt-6 space-y-4">
+              <div className="aspect-video w-full max-w-2xl mx-auto overflow-hidden rounded-xl border border-black/10 flex items-center justify-center">
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/Nw478YoO3og?si=Tlq4mQe0x2RlSpPJ&autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=Nw478YoO3og"
@@ -92,7 +92,7 @@ export default function HeaderHero() {
                   allowFullScreen
                 />
               </div>
-              <div>
+              <div className="text-center md:text-left">
                 <p className="text-sm text-black/70">
                   Book a 20-Minute Discovery Call — Choose a Time That Works for You
                 </p>
