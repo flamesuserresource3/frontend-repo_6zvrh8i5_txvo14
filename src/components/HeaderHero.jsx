@@ -20,21 +20,32 @@ export default function HeaderHero() {
   return (
     <header className="relative">
       {/* Nav */}
-      <div className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:py-6">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full border border-black/10" />
-            <span className="text-xl font-semibold tracking-tight md:text-2xl">Velodent</span>
+      <div className="sticky top-0 z-50 w-full border-b border-black/10 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 md:py-7">
+          {/* Brand */}
+          <div className="flex items-center">
+            <a href="#home" className="block select-none leading-none" aria-label="Velodent Home">
+              <span className="text-2xl font-semibold tracking-tight md:text-3xl">Velodent</span>
+            </a>
           </div>
+
+          {/* Desktop Nav */}
           <nav className="hidden items-center gap-8 md:flex">
-            <a href="#services" className="text-sm font-medium hover:opacity-70">Services</a>
-            <a href="#cases" className="text-sm font-medium hover:opacity-70">Case Studies</a>
-            <a href="#testimonials" className="text-sm font-medium hover:opacity-70">Testimonials</a>
-            <a href="#faq" className="text-sm font-medium hover:opacity-70">FAQ</a>
+            <a href="#home" className="text-[15px] font-medium hover:opacity-70">Home</a>
+            <a href="#about" className="text-[15px] font-medium hover:opacity-70">About</a>
+            <a href="#services" className="text-[15px] font-medium hover:opacity-70">Services</a>
+            <a href="#cases" className="text-[15px] font-medium hover:opacity-70">Case Studies</a>
+            <a href="#testimonials" className="text-[15px] font-medium hover:opacity-70">Testimonials</a>
+            <a href="#faq" className="text-[15px] font-medium hover:opacity-70">FAQ</a>
+            <a href="#dashboard" className="text-[15px] font-medium hover:opacity-70">Dashboard</a>
           </nav>
+
+          {/* CTA (Desktop) */}
           <div className="hidden md:block">
             <BookingButton />
           </div>
+
+          {/* Mobile Toggle */}
           <button
             className="inline-flex items-center justify-center rounded-md border border-black/10 px-3 py-2 md:hidden"
             onClick={() => setNavOpen((v) => !v)}
@@ -44,12 +55,15 @@ export default function HeaderHero() {
           </button>
         </div>
         {navOpen && (
-          <div className="mx-auto block max-w-7xl px-4 pb-4 md:hidden">
-            <div className="flex flex-col gap-3">
+          <div className="mx-auto block max-w-7xl px-4 pb-5 md:hidden">
+            <div className="flex flex-col gap-2">
+              <a href="#home" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Home</a>
+              <a href="#about" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>About</a>
               <a href="#services" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Services</a>
               <a href="#cases" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Case Studies</a>
               <a href="#testimonials" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Testimonials</a>
               <a href="#faq" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>FAQ</a>
+              <a href="#dashboard" className="rounded-md px-3 py-2 hover:bg-black/5" onClick={() => setNavOpen(false)}>Dashboard</a>
               <BookingButton className="mt-2 w-full justify-center" />
             </div>
           </div>
@@ -57,7 +71,7 @@ export default function HeaderHero() {
       </div>
 
       {/* Hero */}
-      <section className="relative mx-auto max-w-7xl px-4 pt-10 pb-16 md:pt-16 md:pb-24">
+      <section id="home" className="relative mx-auto max-w-7xl px-4 pt-10 pb-16 md:pt-16 md:pb-24">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div className="order-2 md:order-1">
             <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
